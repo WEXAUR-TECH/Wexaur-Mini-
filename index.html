@@ -47,7 +47,7 @@
   .search-box:hover{box-shadow:0 1px 6px rgba(32,33,36,0.28);border-color:rgba(223,225,229,0)}
   .search-icon{color:#9aa0a6;margin-right:13px;display:flex;align-items:center}
   .search-input{flex:1;border:none;outline:none;font-size:16px;background:transparent}
-  .voice-icon, .camera-icon{color:#4285f4;margin-left:10px;cursor:pointer;display:flex;align-items:center;padding:8px}
+  .voice-icon, .camera-icon{color:#428;margin-left:10px;cursor:pointer;display:flex;align-items:center;padding:8px}
   .voice-icon:hover, .camera-icon:hover{background:#f1f3f4;border-radius:50%}
   
   /* Search Bar */
@@ -261,7 +261,7 @@
     <!-- Header -->
     <div class="results-header">
       <div class="results-logo">
-        <div class="logo-text">WEXAUR</div>
+        <div class="logo-text">WEXAUR mini</div>
       </div>
       <div class="search-box-results">
         <div class="search-box">
@@ -369,8 +369,8 @@
 
 <script>
 /* ====== USER KEYS (as you provided) ====== */
-const API_KEY = "AIzaSyBJ5uSrX85HNdOYXUxMMRPIf-HuxfdjO_I";
-const CX_ID  = "d4748f519323b4e51";
+const API_KEY = "AIzaSyCLJ-Bc-GyuhYLYraeAf_TFLM6BQGneMDk";
+const CX_ID  = "34ef98d230ef74403";
 /* ====== END KEYS ====== */
 
 /* DOM Elements */
@@ -396,8 +396,8 @@ let festivalMode = localStorage.getItem('wex_fest_mode') || 'auto';
 function detectFestivalAuto(){
   const now = new Date();
   const m = now.getMonth(), d = now.getDate();
-  // Diwali: Oct-Nov (month 9 or 10) - 19,20,21,22,23 Oct
-  if((m === 9 && (d >= 19 && d <= 23)) || (m === 10 && d <= 5)) return 'diwali';
+  // Diwali: Oct-Nov (month 9 or 10) - 18,19,20,21,22,23,24 Oct
+  if((m === 9 && (d >= 18 && d <= 24)) || (m === 10 && d <= 5)) return 'diwali';
   // Christmas: Dec 25
   if(m === 11 && d === 25) return 'christmas';
   // New Year: Dec 31 / Jan 1
